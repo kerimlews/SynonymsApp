@@ -19,12 +19,6 @@
 			"pre-commit": "pretty-quick --staged"
 		}
 	},
-	"jest": {
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
-		],
-		"setupFiles": ["./src/setup.js"],
-	},
 	"dependencies": {
 		"@loadable/component": "^5.12.0",
 		"@loadable/server": "^5.12.0",
