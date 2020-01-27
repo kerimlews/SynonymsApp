@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import Alert from 'shared/components/Alert'
+import Alert from 'components/Alert'
 
 export default class ErrorBoundary extends React.Component<any> {
 	state = { hasError: false }
