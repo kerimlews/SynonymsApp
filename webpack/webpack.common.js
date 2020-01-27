@@ -13,6 +13,10 @@ function srcPath(name) {
 	return path.resolve(__dirname, '../', 'src', name)
 }
 
+function sharedPath(name) {
+	return path.resolve(__dirname, '../', 'src', 'shared', name)
+}
+
 const postCssPlugins = [flexbugs(), precss(), autoprefixer()]
 const cssnanoPlugin = cssnano({
 	preset: ['default', { discardComments: { removeAll: true } }],
@@ -74,9 +78,9 @@ module.exports = {
 			'react-dom': '@hot-loader/react-dom',
 			App: srcPath('App'),
 			pages: srcPath('pages'),
-			components: srcPath('shared/components'),
-			scss: srcPath('shared/scss'),
-			utils: srcPath('shared/utils'),
+			components: sharedPath('components'),
+			scss: sharedPath('scss'),
+			utils: sharedPath('utils'),
 		},
 	},
 	module: {

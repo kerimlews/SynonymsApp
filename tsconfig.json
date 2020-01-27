@@ -11,15 +11,15 @@
 		"target": "es6",
 		"jsx": "react",
 		"baseUrl": "src",
-		"moduleResolution": "node"
-	},
-	"paths": {
-		"@App/*": ["App/*"],
-		"@pages/*": ["pages/*"],
-		"@components/*": ["shared/components/*"],
-		"@scss/*": ["shared/scss/*"],
-		"@utils/*": ["shared/utils/*"]
+		"moduleResolution": "node",
+		"paths": {
+			"App/*": ["App/*"],
+			"pages/*": ["pages/*"],
+			"components/*": ["shared/components/*"],
+			"scss/*": ["shared/scss/*"],
+			"utils/*": ["shared/utils/*"]
+		}
 	},
 	"include": ["src/**/*"],
-	"exclude": ["node_modules", "**/*.spec.ts"]
+	"exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { loadableReady } from '@loadable/component'
 
-import App from './src/App'
+import App from 'App'
 
 const render = () =>
 	ReactDOM.render(
