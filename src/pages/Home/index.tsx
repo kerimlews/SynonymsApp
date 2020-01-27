@@ -1,11 +1,17 @@
 import * as React from 'react'
+import asyncPage from 'utils/asyncPage'
 
-import Alert from 'components/Alert'
+const home = (com: string) => `Home/components/${com}`
+const SearchInput = asyncPage(home('SearchInput'))
+const AddNewSynonym = asyncPage(home('AddNewSynonym'))
+const Synonyms = asyncPage(home('Synonyms'))
 
-export default function HOME() {
+export default function Home() {
 	return (
-		<div className="alert alert-info">
-			<Alert value="heyyy hello world" />
+		<div className="home">
+			<AddNewSynonym />
+			<SearchInput />
+			<Synonyms />
 		</div>
 	)
 }

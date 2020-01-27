@@ -1,17 +1,17 @@
 import * as React from 'react'
-import asyncComponent from 'utils/asyncComponent'
 import asyncPage from 'utils/asyncPage'
+import asyncComponent from 'utils/asyncComponent'
 
 // Styles for entire app
 import 'scss/styles.scss'
 
-const Layout = asyncComponent('Layout')
 const Home = asyncPage('Home')
+const ErrorBoundary = asyncComponent('ErrorBoundary')
 
 export default function App() {
 	return (
-		<Layout>
+		<ErrorBoundary>
 			<Home />
-		</Layout>
+		</ErrorBoundary>
 	)
 }

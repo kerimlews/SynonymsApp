@@ -1,30 +1,30 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @types/loadable/component
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev @types/loadsh
 
 PATH: 
-  C:\Users\Kerim Alihodza\Desktop\cmder\bin;C:\Users\Kerim Alihodza\Desktop\cmder\vendor\bin;C:\Users\Kerim Alihodza\Desktop\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\Kerim Alihodza\Desktop\cmder\vendor\conemu-maximus5;C:\Users\Kerim Alihodza\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\Users\Kerim Alihodza\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Kerim Alihodza\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Python27;C:\Program Files\PuTTY;C:\Python27\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Apache\apache-maven-3.5.3\bin;C:\Program Files (x86)\GitExtensions;C:\Program Files\nodejs;C:\Users\Kerim Alihodza\AppData\Local\Microsoft\WindowsApps;C:\Users\Kerim Alihodza\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Kerim Alihodza\AppData\Local\Yarn\bin;C:\wamp64\bin\mysql\mysql5.7.26\bin;C:\Users\Kerim Alihodza\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;C:\Program Files\Git\mingw64\bin\usr\bin;C:\Users\Kerim Alihodza\Desktop\cmder
+  C:\Program Files (x86)\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files (x86)\cmder\bin;C:\Program Files (x86)\cmder\vendor\bin;C:\Program Files (x86)\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files (x86)\cmder\vendor\conemu-maximus5;C:\Program Files (x86)\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\840 G3 16 GB\AppData\Local\Microsoft\WindowsApps;C:\Users\840 G3 16 GB\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\840 G3 16 GB\AppData\Roaming\npm;C:\Users\840 G3 16 GB\AppData\Local\Yarn\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\cmder
 
 Yarn version: 
-  1.17.3
+  1.19.1
 
 Node version: 
-  12.14.0
+  10.16.3
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2floadable/component: Request "https://registry.yarnpkg.com/@types%2floadable/component" returned a 405
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65948:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140464:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141436:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141358:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1184:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: https://registry.yarnpkg.com/@types%2floadsh: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66035:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140564:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141536:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141458:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
 
 npm manifest: 
   {
@@ -52,6 +52,7 @@ npm manifest:
   		"@loadable/component": "^5.12.0",
   		"@loadable/server": "^5.12.0",
   		"@types/jest": "^24.9.1",
+  		"@types/loadable__component": "^5.10.0",
   		"@types/node": "^13.5.0",
   		"i": "^0.3.6",
   		"npm": "^6.13.6",
@@ -89,6 +90,7 @@ npm manifest:
   		"html-webpack-plugin": "^3.2.0",
   		"husky": "^4.2.1",
   		"jest": "^25.1.0",
+  		"loadsh": "^0.0.4",
   		"mini-css-extract-plugin": "^0.9.0",
   		"node-sass": "^4.13.1",
   		"optimize-css-assets-webpack-plugin": "^5.0.3",
@@ -1314,6 +1316,13 @@ Lockfile:
     integrity sha512-Fb38HkXSVA4L8fGKEZ6le5bB8r6MRWlOCZbVuWZcmOMSCd2wCYOwN1ibj8daIoV9naq7aaOZjrLCoCMptKU/4Q==
     dependencies:
       jest-diff "^24.3.0"
+  
+  "@types/loadable__component@^5.10.0":
+    version "5.10.0"
+    resolved "https://registry.yarnpkg.com/@types/loadable__component/-/loadable__component-5.10.0.tgz#178fdc401983f4f93647fac778226da7b8c1e080"
+    integrity sha512-AaDP1VxV3p7CdPOtOTl3ALgQ6ES4AxJKO9UGj9vJonq/w2yERxwdzFiWNQFh9fEDXEzjxujBlM2RmSJtHV1/pA==
+    dependencies:
+      "@types/react" "*"
   
   "@types/minimatch@*", "@types/minimatch@^3.0.3":
     version "3.0.3"
@@ -3337,7 +3346,7 @@ Lockfile:
     dependencies:
       ms "^2.1.1"
   
-  debuglog@*, debuglog@^1.0.1:
+  debuglog@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
     integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -5120,7 +5129,7 @@ Lockfile:
       pkg-dir "^4.2.0"
       resolve-cwd "^3.0.0"
   
-  imurmurhash@*, imurmurhash@^0.1.4:
+  imurmurhash@^0.1.4:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
     integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -6426,6 +6435,11 @@ Lockfile:
       json5 "^0.5.0"
       object-assign "^4.0.1"
   
+  loadsh@^0.0.4:
+    version "0.0.4"
+    resolved "https://registry.yarnpkg.com/loadsh/-/loadsh-0.0.4.tgz#5314babd12bb13315dde024a4ca70758c5489d2d"
+    integrity sha512-U+wLL8InpfRalWrr+0SuhWgGt10M4OyAk6G8xCYo2rwpiHtxZkWiFpjei0vO463ghW8LPCdhqQxXlMy2qicAEw==
+  
   locate-path@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -6464,11 +6478,6 @@ Lockfile:
     dependencies:
       signal-exit "^3.0.2"
   
-  lodash._baseindexof@*:
-    version "3.1.0"
-    resolved "https://registry.yarnpkg.com/lodash._baseindexof/-/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
-    integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
-  
   lodash._baseuniq@~4.6.0:
     version "4.6.0"
     resolved "https://registry.yarnpkg.com/lodash._baseuniq/-/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -6477,32 +6486,10 @@ Lockfile:
       lodash._createset "~4.0.0"
       lodash._root "~3.0.0"
   
-  lodash._bindcallback@*:
-    version "3.0.1"
-    resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
-    integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
-  
-  lodash._cacheindexof@*:
-    version "3.0.2"
-    resolved "https://registry.yarnpkg.com/lodash._cacheindexof/-/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
-    integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
-  
-  lodash._createcache@*:
-    version "3.1.2"
-    resolved "https://registry.yarnpkg.com/lodash._createcache/-/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
-    integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
-    dependencies:
-      lodash._getnative "^3.0.0"
-  
   lodash._createset@~4.0.0:
     version "4.0.3"
     resolved "https://registry.yarnpkg.com/lodash._createset/-/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
     integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
-  
-  lodash._getnative@*, lodash._getnative@^3.0.0:
-    version "3.9.1"
-    resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-    integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
   
   lodash._reinterpolate@^3.0.0:
     version "3.0.0"
@@ -6538,11 +6525,6 @@ Lockfile:
     version "4.1.2"
     resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
     integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
-  
-  lodash.restparam@*:
-    version "3.6.1"
-    resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-    integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
   
   lodash.sortby@^4.7.0:
     version "4.7.0"

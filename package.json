@@ -22,9 +22,11 @@
 	"dependencies": {
 		"@loadable/component": "^5.12.0",
 		"@loadable/server": "^5.12.0",
+		"@types/classnames": "^2.2.9",
 		"@types/jest": "^24.9.1",
 		"@types/loadable__component": "^5.10.0",
 		"@types/node": "^13.5.0",
+		"classnames": "^2.2.6",
 		"i": "^0.3.6",
 		"npm": "^6.13.6",
 		"onchange": "^6.1.0",
