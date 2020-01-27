@@ -6,27 +6,77 @@
 	"author": "kerimlews",
 	"license": "MIT",
 	"scripts": {
-		"start": "",
-		"build": "",
-		"prettier-watch": "onchange -v 'src/**/**' --exclude-path .gitignore -- prettier --write {{changed}}"
+		"start": "cross-env NODE_ENV=development && yarn run dev",
+		"build": "yarn run clean && cross-env NODE_ENV=production && yarn run prod",
+		"test": "jest --watchAll",
+		"prettier-watch": "onchange -v 'src/**/**' --exclude-path .gitignore -- prettier --write {{changed}}",
+		"dev": "webpack-dev-server --config webpack/webpack.dev.js --hot",
+		"prod": "webpack --config webpack/webpack.prod.js",
+		"clean": "rimraf ./build"
 	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "pretty-quick --staged"
 		}
 	},
+	"jest": {
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		],
+		"setupFiles": ["./src/setup.js"],
+	},
 	"dependencies": {
 		"@loadable/component": "^5.12.0",
 		"@loadable/server": "^5.12.0",
-		"onchange": "^6.1.0"
+		"@types/node": "^13.5.0",
+		"onchange": "^6.1.0",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.8.3",
+		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-proposal-decorators": "^7.8.3",
+		"@babel/preset-env": "^7.8.3",
+		"@babel/preset-react": "^7.8.3",
+		"@babel/preset-typescript": "^7.8.3",
+		"@hot-loader/react-dom": "^16.11.0",
 		"@loadable/babel-plugin": "^5.12.0",
 		"@loadable/webpack-plugin": "^5.12.0",
+		"@types/react": "^16.9.19",
+		"@types/react-dom": "^16.9.5",
+		"autoprefixer": "^9.7.4",
+		"babel-jest": "^25.1.0",
+		"babel-loader": "^8.0.6",
+		"chalk": "^3.0.0",
+		"cross-env": "^7.0.0",
+		"css-loader": "^3.4.2",
+		"cssnano": "^4.1.10",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.2",
+		"enzyme-to-json": "^3.4.3",
 		"eslint-config-prettier": "^6.9.0",
 		"eslint-plugin-prettier": "^3.1.2",
+		"fork-ts-checker-webpack-plugin": "^4.0.2",
+		"html-webpack-plugin": "^3.2.0",
 		"husky": "^4.2.1",
+		"jest": "^25.1.0",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.13.1",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-flexbugs-fixes": "^4.1.0",
+		"postcss-loader": "^3.0.0",
 		"prettier": "1.19.1",
-		"pretty-quick": "^2.0.1"
+		"pretty-quick": "^2.0.1",
+		"progress-bar-webpack-plugin": "^2.1.0",
+		"react-hot-loader": "^4.12.19",
+		"sass-loader": "^8.0.2",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^1.1.3",
+		"typescript": "^3.7.5",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.10.1",
+		"webpack-merge": "^4.2.2"
 	}
 }

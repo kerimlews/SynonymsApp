@@ -1,0 +1,25 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"allowSyntheticDefaultImports": true,
+		"module": "commonjs",
+		"target": "es6",
+		"jsx": "react",
+		"baseUrl": "src",
+		"moduleResolution": "node"
+	},
+	"paths": {
+		"@App/*": ["App/*"],
+		"@pages/*": ["pages/*"],
+		"@components/*": ["shared/components/*"],
+		"@scss/*": ["shared/scss/*"],
+		"@utils/*": ["shared/utils/*"]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "**/*.spec.ts"]
+}
