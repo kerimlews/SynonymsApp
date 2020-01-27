@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const flexbugs = require('postcss-flexbugs-fixes')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
+const precss = require('precss')
 const LoadablePlugin = require('@loadable/webpack-plugin')
 
 const isDebug = process.env.NODE_ENV !== 'production'
@@ -11,6 +12,11 @@ const isDebug = process.env.NODE_ENV !== 'production'
 function srcPath(name) {
 	return path.resolve(__dirname, '../', 'src', name)
 }
+
+const postCssPlugins = [flexbugs(), precss(), autoprefixer()]
+const cssnanoPlugin = cssnano({
+	preset: ['default', { discardComments: { removeAll: true } }],
+})
 
 const cssLoaders = [
 	{
@@ -24,13 +30,7 @@ const cssLoaders = [
 		loader: 'postcss-loader',
 		options: {
 			plugins: () =>
-				isDebug
-					? [flexbugs, autoprefixer()]
-					: [
-							flexbugs,
-							autoprefixer(),
-							cssnano({ preset: 'default' }),
-					  ],
+				isDebug ? postCssPlugins : postCssPlugins.push(cssnanoPlugin),
 		},
 	},
 	{
