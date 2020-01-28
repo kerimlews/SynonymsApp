@@ -4,14 +4,16 @@ interface IProps {
 	value: string
 	onClick: any
 	type: string
+	icon?: string
 }
 
-export default function Button({ value, type, onClick }: IProps) {
-	const classname = `"btn btn-${type}"`
+export default function Button({ value, type, onClick, icon }: IProps) {
+	const classname = `btn btn-${type}`
 
 	return (
 		<button type="button" className={classname} onClick={onClick}>
-			{value}
+			{icon && <i className={icon}></i>}
+			{value && <span>{value}</span>}
 		</button>
 	)
 }

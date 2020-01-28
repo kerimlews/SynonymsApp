@@ -17,7 +17,7 @@ export default class ErrorBoundary extends React.Component<any> {
 
 	render() {
 		if (this.state.hasError) {
-			return <Alert value="Something went wrong." />
+			return <Alert type="danger" value="Something went wrong." />
 		}
 
 		return this.props.children

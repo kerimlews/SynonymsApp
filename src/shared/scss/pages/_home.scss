@@ -1,0 +1,39 @@
+/***********************=======================**************************
+                                 HOME
+************************=======================************************/
+
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+	.home-synonym-card {
+		border-radius: 0.2rem;
+		overflow: hidden;
+
+		.form-control {
+			background: rgba(167, 167, 167, 0.075) !important;
+		}
+
+		.add-new-synonym {
+			.text-input {
+				flex: 1 0 auto !important;
+				margin-right: 0.5rem;
+				input {
+					width: 100%;
+				}
+			}
+		}
+
+		.synonyms {
+			.synonyms-card {
+				max-height: 300px;
+				height: 230px;
+				overflow-x: visible;
+				overflow-y: hidden;
+				background-color: transparent;
+			}
+		}
+	}
+}

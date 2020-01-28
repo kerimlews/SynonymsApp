@@ -4,5 +4,13 @@ interface IProps {
 	children: React.ReactNode
 }
 export default function Layout({ children }: IProps) {
-	return <div className="layout">{children}</div>
+	return (
+		<div className="layout">
+			<div className="logo">
+				<h3>SynonymApp</h3>
+				<span>Powered by Keirm Alihodza</span>
+			</div>
+			{children}
+		</div>
+	)
 }

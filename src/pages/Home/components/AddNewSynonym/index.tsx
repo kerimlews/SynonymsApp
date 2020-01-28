@@ -11,11 +11,16 @@ export default function AddNewSynonym() {
 	const submit = () => console.log('Add new', word.value, synonym.value)
 
 	return (
-		<div className="row">
-			<div className="form-inline">
+		<div className="add-new-synonym mb-2 row">
+			<div className="form-inline col-md-12">
 				<TextInput onChange={word.onChange} placeholder="word" />
 				<TextInput onChange={synonym.onChange} placeholder="synonym" />
-				<Button type="primary" value="Add new" onClick={submit} />
+				<Button
+					type="primary"
+					value="Add new"
+					icon="fal fa-paper-plane"
+					onClick={submit}
+				/>
 			</div>
 		</div>
 	)

@@ -17,7 +17,7 @@ function sharedPath(name) {
 	return path.resolve(__dirname, '../', 'src', 'shared', name)
 }
 
-const postCssPlugins = [flexbugs(), precss(), autoprefixer()]
+const postCssPlugins = [flexbugs, precss(), autoprefixer()]
 const cssnanoPlugin = cssnano({
 	preset: ['default', { discardComments: { removeAll: true } }],
 })
@@ -36,6 +36,9 @@ const cssLoaders = [
 			plugins: () =>
 				isDebug ? postCssPlugins : postCssPlugins.push(cssnanoPlugin),
 		},
+	},
+	{
+		loader: 'resolve-url-loader',
 	},
 	{
 		loader: 'sass-loader',
@@ -92,8 +95,8 @@ module.exports = {
 			},
 			{ enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
 			{ test: /\.scss$/, use: cssLoaders },
-			{ test: /\.(png|svg|jpg|gif)$/, use: ['file-loader'] },
-			{ test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] },
+			{ test: /\.(png|svg|jpg|gif)$/, use: 'file-loader' },
+			{ test: /\.(woff|woff2|eot|ttf|otf)$/, loader: 'file-loader' },
 			{ test: /\.(csv|tsv)$/, use: ['csv-loader'] },
 			{ test: /\.xml$/, use: ['xml-loader'] },
 		],

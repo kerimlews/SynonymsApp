@@ -2,8 +2,11 @@ import * as React from 'react'
 
 interface IProps {
 	value: string
+	type: string
 }
 
-export default function Alert({ value }: IProps) {
-	return <div className="alert alert-info">{value}</div>
+export default function Alert({ type, value }: IProps) {
+	const classname = `alert alert-${type}`
+
+	return <div className={classname}>{value}</div>
 }

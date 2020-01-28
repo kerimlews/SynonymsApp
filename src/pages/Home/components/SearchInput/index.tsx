@@ -17,11 +17,13 @@ export default function SearhInput() {
 	}, [debouncedSearchTerm])
 
 	return (
-		<div className="row">
-			<TextInput
-				placeholder="Search for ..."
-				onChange={onSearchInputChange}
-			/>
+		<div className="search-input row">
+			<div className="col-md-12">
+				<TextInput
+					placeholder="Search for ..."
+					onChange={onSearchInputChange}
+				/>
+			</div>
 		</div>
 	)
 }

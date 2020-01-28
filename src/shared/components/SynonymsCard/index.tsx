@@ -9,10 +9,7 @@ export default function SynonymsCard({ synonyms }: IProps) {
 		<div className="synonyms-card card">
 			<div className="card-body">
 				{synonyms.map((synonym: string) => (
-					<span
-						key={synonym}
-						className="badge badge-pill badge-light"
-					>
+					<span key={synonym} className="badge badge-dark m-1">
 						{synonym}
 					</span>
 				))}
