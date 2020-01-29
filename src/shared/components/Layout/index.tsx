@@ -6,9 +6,11 @@ interface IProps {
 export default function Layout({ children }: IProps) {
 	return (
 		<div className="layout">
-			<div className="logo">
-				<h3>SynonymApp</h3>
-				<span>Powered by Keirm Alihodza</span>
+			<div className="nav">
+				<div className="logo">
+					<h3>SynonymApp</h3>
+					<span>Powered by Keirm Alihodza</span>
+				</div>
 			</div>
 			{children}
 		</div>

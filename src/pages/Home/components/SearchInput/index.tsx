@@ -20,6 +20,8 @@ export default function SearhInput() {
 		<div className="search-input row">
 			<div className="col-md-12">
 				<TextInput
+					isLoading={false}
+					icon="fad fa-search"
 					placeholder="Search for ..."
 					onChange={onSearchInputChange}
 				/>

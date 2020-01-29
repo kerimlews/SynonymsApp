@@ -16,6 +16,7 @@ export default function AddNewSynonym() {
 				<TextInput onChange={word.onChange} placeholder="word" />
 				<TextInput onChange={synonym.onChange} placeholder="synonym" />
 				<Button
+					isLoading={false}
 					type="primary"
 					value="Add new"
 					icon="fal fa-paper-plane"

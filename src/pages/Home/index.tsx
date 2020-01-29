@@ -13,7 +13,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<div className="home">
-				<div className="home-synonym-card col-md-4 pt-2">
+				<div className="home-synonym-card col-12 col-sm-12 col-md-12 col-xl-6  pt-2">
 					<AddNewSynonym />
 					<SearchInput />
 					<Synonyms />

@@ -11,6 +11,7 @@
 	.home-synonym-card {
 		border-radius: 0.2rem;
 		overflow: hidden;
+		max-width: 48rem;
 
 		.form-control {
 			background: rgba(167, 167, 167, 0.075) !important;
@@ -33,6 +34,18 @@
 				overflow-x: visible;
 				overflow-y: hidden;
 				background-color: transparent;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.home {
+		.home-synonym-card {
+			.add-new-synonym {
+				button {
+					width: 100%;
+				}
 			}
 		}
 	}

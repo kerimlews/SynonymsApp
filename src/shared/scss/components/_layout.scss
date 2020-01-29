@@ -8,19 +8,37 @@
 	background-attachment: fixed;
 	background-size: cover;
 
-	.logo {
-		left: 50%;
-		top: 15%;
-		transform: translate(-50%, 50%);
-		text-align: center;
-		position: absolute;
+	.nav {
+		.logo {
+			left: 50%;
+			top: 15%;
+			transform: translate(-50%, 50%);
+			text-align: center;
+			position: absolute;
 
-		h3 {
-			color: gray;
+			h3 {
+				color: gray;
+			}
+
+			span {
+				color: #c3c3c3;
+			}
 		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.logo {
+		top: 5% !important;
 
 		span {
-			color: #c3c3c3;
+			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.logo {
+		top: 0% !important;
 	}
 }

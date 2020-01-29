@@ -3,4 +3,19 @@
 ************************=======================************************/
 
 .text-input {
+	position: relative;
+
+	&.is-icon {
+		i {
+			position: absolute;
+			left: 0.7rem;
+			top: 21%;
+			font-size: 1.4rem;
+			color: #969696;
+		}
+
+		input {
+			padding-left: 2.6rem;
+		}
+	}
 }
