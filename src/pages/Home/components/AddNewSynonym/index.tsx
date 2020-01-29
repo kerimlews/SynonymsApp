@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
 import asyncComponent from 'utils/asyncComponent'
+import { isEmpty } from 'utils/helpers'
 
 const TextInput = asyncComponent('TextInput')
 const Button = asyncComponent('Button')
@@ -8,7 +9,11 @@ const Button = asyncComponent('Button')
 export default function AddNewSynonym() {
 	const word = textInput('')
 	const synonym = textInput('')
-	const submit = () => console.log('Add new', word.value, synonym.value)
+	const isValidForm = !isEmpty(word.value) && !isEmpty(synonym.value)
+	console.log(isValidForm)
+
+	const submit = () =>
+		isValidForm && console.log('Add new ->', word.value, synonym.value)
 
 	return (
 		<div className="add-new-synonym mb-2 row">

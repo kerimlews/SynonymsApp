@@ -4,6 +4,6 @@ import Spinner from 'components/Spinner'
 
 export default (componentName: string): any => {
 	return loadable(() => import(`components/${componentName}`), {
-		fallback: <Spinner isLoading value="Something went wrong !" />,
+		fallback: <Spinner value="Loading..." />,
 	})
 }
