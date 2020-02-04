@@ -6,8 +6,8 @@
 	"author": "kerimlews",
 	"license": "MIT",
 	"scripts": {
-		"start": "cross-env NODE_ENV=development && yarn run dev",
-		"build": "yarn run clean && cross-env NODE_ENV=production && yarn run prod",
+		"start": "set NODE_ENV=development && yarn run dev",
+		"build": "yarn run clean && set NODE_ENV=production && yarn run prod",
 		"test": "jest --watch",
 		"prettier-watch": "onchange -v 'src/**/**' --exclude-path .gitignore -- prettier --write {{changed}}",
 		"dev": "webpack-dev-server --config webpack/webpack.dev.js --hot",

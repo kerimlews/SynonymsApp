@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const precss = require('precss')
 
-const isDebug = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== 'production'
 
 function srcPath(name) {
 	return path.resolve(__dirname, '../', 'src', name)
@@ -33,7 +33,7 @@ const cssLoaders = [
 		loader: 'postcss-loader',
 		options: {
 			plugins: () =>
-				isDebug ? postCssPlugins : postCssPlugins.push(cssnanoPlugin),
+				isDev ? postCssPlugins : postCssPlugins.push(cssnanoPlugin),
 		},
 	},
 	{
@@ -110,12 +110,12 @@ module.exports = {
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+				API_BASE_URL: JSON.stringify(
+					isDev
+						? 'http://localhost:3000'
+						: 'https://synonymappserver.herokuapp.com'
+				),
 			},
-			'process.env.API_BASE_URL': JSON.stringify(
-				isDebug
-					? 'http://localhost:3000'
-					: 'https://synonymappserver.herokuapp.com'
-			),
 		}),
 	],
 }

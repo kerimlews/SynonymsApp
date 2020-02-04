@@ -10,7 +10,6 @@ import {
 } from '../interfaces/ISearchSynonyms'
 
 export function searchSynonyms(word: string): ISearchSynonyms {
-	console.log(word)
 	return {
 		type: SEARCH_SYNONYMS,
 		payload: {
