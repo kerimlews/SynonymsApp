@@ -110,12 +110,12 @@ module.exports = {
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-				API_BASE_URL: JSON.stringify(
-					isDev
-						? 'http://localhost:3000'
-						: 'https://synonymappserver.herokuapp.com'
-				),
 			},
+			'process.env.API_BASE_URL': JSON.stringify(
+				isDev
+					? 'http://localhost:3000'
+					: 'https://synonymappserver.herokuapp.com'
+			),
 		}),
 	],
 }
