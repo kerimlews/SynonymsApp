@@ -112,7 +112,7 @@ module.exports = {
 				NODE_ENV: JSON.stringify(process.env.NODE_ENV),
 			},
 			'process.env.API_BASE_URL': JSON.stringify(
-				isDev
+				!isDev
 					? 'http://localhost:3000'
 					: 'https://synonymappserver.herokuapp.com'
 			),
