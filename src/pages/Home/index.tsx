@@ -1,24 +1,31 @@
 import * as React from 'react'
-import asyncPage from 'utils/asyncPage'
-import asyncComponent from 'utils/asyncComponent'
+import { connect } from 'react-redux'
+import { selectHomeError } from './reselect'
+import Layout from 'components/Layout'
+import Alert from 'components/Alert'
+import AddNewSynonym from './components/AddNewSynonym'
+import Synonyms from './components/Synonyms'
+import SearchInput from './components/SearchInput'
 
-const home = (com: string) => `Home/components/${com}`
-const SearchInput = asyncPage(home('SearchInput'))
-const AddNewSynonym = asyncPage(home('AddNewSynonym'))
-const Synonyms = asyncPage(home('Synonyms'))
+interface IProps {
+	error?: any
+}
 
-const Layout = asyncComponent('Layout')
-
-export default function Home() {
+function Home({ error }: IProps) {
 	return (
 		<Layout>
 			<div className="home">
-				<div className="home-synonym-card col-12 col-sm-12 col-md-12 col-xl-6  pt-2">
-					<AddNewSynonym />
-					<SearchInput />
-					<Synonyms />
+				<div className="home-synonym-card col-12 col-sm-12 col-md-12 col-xl-6 pt-2">
+					<Alert type="danger" value={error} />
+					<div>
+						<AddNewSynonym />
+						<SearchInput />
+						<Synonyms />
+					</div>
 				</div>
 			</div>
 		</Layout>
 	)
 }
+
+export default connect(selectHomeError())(Home)

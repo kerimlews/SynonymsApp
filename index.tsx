@@ -1,21 +1,29 @@
+import 'babel-polyfill'
+
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { loadableReady } from '@loadable/component'
-import loadable from '@loadable/component'
+import { Provider } from 'react-redux'
+import configureStore from './src/config/store'
 
-// dynamic imported components
-const App = loadable(() => import('./src/App'))
+import App from './src/App'
+
+// configure store
+const initialState = {}
+const history = {}
+const store = configureStore(initialState, history)
 
 const render = () =>
 	ReactDOM.render(
 		<AppContainer>
-			<App />
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</AppContainer>,
 		document.getElementById('root')
 	)
 
-loadableReady(() => render())
+render()
 
 // HMR
 const hotModule = (module as any).hot

@@ -1,0 +1,7 @@
+export const ADD_NEW_SYNONYM = 'pages/Home/ADD_NEW_SYNONYM'
+export const ADD_NEW_SYNONYM_SUCCESS = 'pages/Home/ADD_NEW_SYNONYM_SUCCESS'
+export const ADD_NEW_SYNONYM_FAIL = 'pages/Home/ADD_NEW_SYNONYM_FAIL'
+
+export const SEARCH_SYNONYMS = 'pages/Home/SEARCH_SYNONYMS'
+export const SEARCH_SYNONYMS_SUCCESS = 'pages/Home/SEARCH_SYNONYMS_SUCCESS'
+export const SEARCH_SYNONYMS_FAIL = 'pages/Home/SEARCH_SYNONYMS_FAIL'

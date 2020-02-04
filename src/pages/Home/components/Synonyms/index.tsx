@@ -1,14 +1,19 @@
 import React from 'react'
-import asyncComponent from 'utils/asyncComponent'
+import { connect } from 'react-redux'
+import { selectHomeSynonyms } from '../../reselect'
+import SynonymsCard from 'components/SynonymsCard'
 
-const SynonymsCard = asyncComponent('SynonymsCard')
-
-export default function Synonyms() {
+interface IProps {
+	synonyms: string[]
+}
+function Synonyms({ synonyms }: IProps) {
 	return (
 		<div className="synonyms row">
 			<div className="col-md-12">
-				<SynonymsCard synonyms={['kera', 'pera', 'mera']} />
+				<SynonymsCard synonyms={synonyms} />
 			</div>
 		</div>
 	)
 }
+
+export default connect(selectHomeSynonyms())(Synonyms)

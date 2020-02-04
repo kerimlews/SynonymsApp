@@ -1,19 +1,22 @@
 import * as React from 'react'
-import { useState } from 'react'
-import asyncComponent from 'utils/asyncComponent'
 import { isEmpty } from 'utils/helpers'
+import { connect } from 'react-redux'
+import { addNewSynonym } from 'pages/Home/actions/AddNewSynonym'
+import input from 'utils/hooks/input'
+import { selectHomeIsLoadingAdd } from 'pages/Home/reselect'
+import TextInput from 'components/TextInput'
+import Button from 'components/Button'
 
-const TextInput = asyncComponent('TextInput')
-const Button = asyncComponent('Button')
+interface IProps {
+	addNew: any
+	isLoading: boolean
+}
 
-export default function AddNewSynonym() {
-	const word = textInput('')
-	const synonym = textInput('')
+function AddNewSynonym({ addNew, isLoading }: IProps) {
+	const word = input('')
+	const synonym = input('')
 	const isValidForm = !isEmpty(word.value) && !isEmpty(synonym.value)
-	console.log(isValidForm)
-
-	const submit = () =>
-		isValidForm && console.log('Add new ->', word.value, synonym.value)
+	const submit = () => isValidForm && addNew(word.value, synonym.value)
 
 	return (
 		<div className="add-new-synonym mb-2 row">
@@ -21,7 +24,7 @@ export default function AddNewSynonym() {
 				<TextInput onChange={word.onChange} placeholder="word" />
 				<TextInput onChange={synonym.onChange} placeholder="synonym" />
 				<Button
-					isLoading={false}
+					isLoading={isLoading}
 					type="primary"
 					value="Add new"
 					icon="fal fa-paper-plane"
@@ -32,12 +35,12 @@ export default function AddNewSynonym() {
 	)
 }
 
-function textInput(initialValue: string) {
-	const [value, setValue] = useState(initialValue)
-	const onChange = (value: string) => setValue(value)
+const mapDispatchToActions = (dispatch: any) => ({
+	addNew: (word: string, synonym: string) =>
+		dispatch(addNewSynonym(word, synonym)),
+})
 
-	return {
-		value,
-		onChange,
-	}
-}
+export default connect(
+	selectHomeIsLoadingAdd(),
+	mapDispatchToActions
+)(AddNewSynonym)

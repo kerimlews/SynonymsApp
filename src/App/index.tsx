@@ -1,12 +1,10 @@
 import * as React from 'react'
-import asyncPage from 'utils/asyncPage'
-import asyncComponent from 'utils/asyncComponent'
 
 // Styles for entire app
 import 'scss/styles.scss'
 
-const Home = asyncPage('Home')
-const ErrorBoundary = asyncComponent('ErrorBoundary')
+import ErrorBoundary from 'components/ErrorBoundary'
+import Home from 'pages/Home'
 
 export default function App() {
 	return (

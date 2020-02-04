@@ -5,7 +5,6 @@ const flexbugs = require('postcss-flexbugs-fixes')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const precss = require('precss')
-const LoadablePlugin = require('@loadable/webpack-plugin')
 
 const isDebug = process.env.NODE_ENV !== 'production'
 
@@ -112,8 +111,11 @@ module.exports = {
 			'process.env': {
 				NODE_ENV: JSON.stringify(process.env.NODE_ENV),
 			},
-			API_BASE_URL: JSON.stringify('http://localhost:3000'),
+			'process.env.API_BASE_URL': JSON.stringify(
+				isDebug
+					? 'http://localhost:3000'
+					: 'https://synonymappserver.herokuapp.com'
+			),
 		}),
-		new LoadablePlugin(),
 	],
 }

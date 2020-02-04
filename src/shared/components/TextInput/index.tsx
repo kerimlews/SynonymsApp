@@ -1,8 +1,6 @@
 import * as React from 'react'
 import classnames from 'classnames'
-import asyncComponent from 'utils/asyncComponent'
-
-const Spinner = asyncComponent('Spinner')
+import Spinner from 'components/Spinner'
 
 interface IProps {
 	value?: string
